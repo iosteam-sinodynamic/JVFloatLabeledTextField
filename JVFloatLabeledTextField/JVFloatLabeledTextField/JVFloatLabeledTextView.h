@@ -40,13 +40,12 @@
  *
  * Credits for the concept to Matt D. Smith (@mds), and his original design:  http://mattdsmith.com/float-label-pattern/
  */
-IB_DESIGNABLE
 @interface JVFloatLabeledTextView : UITextView
 
 /**
  * The placeholder string to be shown in the text view when no other text is present.
  */
-@property (nonatomic, copy) IBInspectable NSString * placeholder;
+@property (nonatomic, copy) NSString * placeholder;
 
 /**
  * Read-only access to the placeholder label.
@@ -61,17 +60,17 @@ IB_DESIGNABLE
 /**
  * Padding to be applied to the y coordinate of the floating label upon presentation.
  */
-@property (nonatomic) IBInspectable CGFloat floatingLabelYPadding;
+@property (nonatomic) CGFloat floatingLabelYPadding;
 
 /**
  * Padding to be applied to the x coordinate of the floating label upon presentation.
  */
-@property (nonatomic) IBInspectable CGFloat floatingLabelXPadding;
+@property (nonatomic) CGFloat floatingLabelXPadding;
 
 /**
  * Padding to be applied to the y coordinate of the placeholder.
  */
-@property (nonatomic) IBInspectable CGFloat placeholderYPadding;
+@property (nonatomic) CGFloat placeholderYPadding;
 
 /**
  * Font to be applied to the floating label. Defaults to `[UIFont boldSystemFontOfSize:12.0f]`. 
@@ -84,13 +83,13 @@ IB_DESIGNABLE
  * Defaults to `[UIColor grayColor]`. 
  * Provided for the convenience of using as an appearance proxy.
  */
-@property (nonatomic, strong) IBInspectable UIColor * floatingLabelTextColor;
+@property (nonatomic, strong) UIColor * floatingLabelTextColor;
 
 /**
  * Text color to be applied to the floating label while the text view is a first responder.
  * Tint color is used by default if an `floatingLabelActiveTextColor` is not provided.
  */
-@property (nonatomic, strong) IBInspectable UIColor * floatingLabelActiveTextColor;
+@property (nonatomic, strong) UIColor * floatingLabelActiveTextColor;
 
 /**
  * Indicates whether the floating label should lock to the top of the text view, or scroll away with text when the text 
@@ -98,31 +97,31 @@ IB_DESIGNABLE
  * be set to the text view's background color
  * Note that this works best when floating labels have a non-clear background color.
  */
-@property (nonatomic, assign) IBInspectable BOOL floatingLabelShouldLockToTop;
+@property (nonatomic, assign) BOOL floatingLabelShouldLockToTop;
 
 /**
  * Text color to be applied to the placeholder.
  * Defaults to `[[UIColor lightGrayColor] colorWithAlphaComponent:0.65f]`.
  */
-@property (nonatomic, strong) IBInspectable UIColor * placeholderTextColor;
+@property (nonatomic, strong) UIColor * placeholderTextColor;
 
 /**
  * Indicates whether the floating label's appearance should be animated regardless of first responder status.
  * By default, animation only occurs if the text field is a first responder.
  */
-@property (nonatomic, assign) IBInspectable BOOL animateEvenIfNotFirstResponder;
+@property (nonatomic, assign) BOOL animateEvenIfNotFirstResponder;
 
 /**
  * Duration of the animation when showing the floating label. 
  * Defaults to 0.3 seconds.
  */
-@property (nonatomic, assign) NSTimeInterval floatingLabelShowAnimationDuration UI_APPEARANCE_SELECTOR;
+@property (nonatomic, assign) NSTimeInterval floatingLabelShowAnimationDuration;
 
 /**
  * Duration of the animation when hiding the floating label. 
  * Defaults to 0.3 seconds.
  */
-@property (nonatomic, assign) NSTimeInterval floatingLabelHideAnimationDuration UI_APPEARANCE_SELECTOR;
+@property (nonatomic, assign) NSTimeInterval floatingLabelHideAnimationDuration;
 
 /**
  *  Sets the placeholder and the floating title
